@@ -589,7 +589,7 @@ function build_ios_target {
         cmake \
             -G "${BUILD_GENERATOR}" \
             -DIMPORT_EXECUTABLES_DIR=out \
-            -DCMAKE_CXX_FLAGS="-Wall -Wno-error=unqualified-std-cast-call" \
+            -DCMAKE_CXX_FLAGS="-Wall -Wno-error=unqualified-std-cast-call -Wno-error=deprecated-declarations" \
             -DCMAKE_BUILD_TYPE="$1" \
             -DCMAKE_INSTALL_PREFIX="../ios-${lc_target}/filament" \
             -DIOS_ARCH="${arch}" \
